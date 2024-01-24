@@ -1,0 +1,10 @@
+name: main
+type: ui
+
+deploy: true
+
+stages:
+  - sbx
+  - dev
+  - prod
+  - test

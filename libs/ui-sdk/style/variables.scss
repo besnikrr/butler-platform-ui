@@ -1,0 +1,109 @@
+@use "sass:map";
+@use "sass:color";
+
+// COLOR VARIABLES
+$colors: (
+  theme-primary: #004438,
+  theme-primaryLight: #175449,
+  theme-primaryLighter: rgba(0, 68, 56, 0.1),
+  theme-primaryLightest: rgba(0, 68, 56, 0.05),
+  theme-inputHighlight: rgba(0, 68, 56, 0.5),
+  theme-secondary: #FFF,
+  theme-secondaryLight: #fcfcfc,
+  theme-danger: #D3514E,
+  theme-dangerLight: color.change(#D3514E, $alpha: 0.9),
+  theme-dangerLighter: #faebea,
+  primary: #343434,
+  primaryLight: rgba(0, 68, 56, 0.9),
+  primaryLighter: rgba(0, 68, 56, 0.1),
+  secondary: #FFF,
+  text-primary: #343434,
+  text-secondary: #FFF,
+  muted-color: #A6A6A6,
+  border-color: #D9D9D9,
+  shadow-color: rgba(0, 0, 0, 0.07),
+  greyLight: #F6F6F6,
+  card-background: #FFFFFF,
+  card-block: #F9F9F9,
+  badge-inactive: #C83532,
+  badge-inactive-background: rgba(200, 53, 50, 0.1)
+);
+
+// theme colors
+$theme-primary: var(--theme-primary, map.get($colors, "theme-primary"));
+$theme-primaryLight: var(--theme-primaryLight, map.get($colors, "theme-primaryLight"));
+$theme-primaryLighter: var(--theme-primaryLighter, map.get($colors, "theme-primaryLighter"));
+$theme-primaryLightest: var(--theme-primaryLightest, map.get($colors, "theme-primaryLightest"));
+$theme-inputHighlight: var(--theme-inputHighlight, map.get($colors, "theme-inputHighlight"));
+$theme-secondary: var(--theme-secondary, map.get($colors, "theme-secondary"));
+$theme-secondaryLight: var(--theme-secondaryLight, map.get($colors, "theme-secondaryLight"));
+$theme-danger: var(--theme-danger, map.get($colors, "theme-danger"));
+$theme-dangerLight: var(--theme-dangerLight, map.get($colors, "theme-dangerLight"));
+$theme-dangerLighter: var(--theme-dangerLighter, map.get($colors, "theme-dangerLighter"));
+$text-primary: var(--text-primary, map.get($colors, "text-primary"));
+$text-secondary: var(--text-secondary, map.get($colors, "text-secondary"));
+$muted-color: var(--muted-color, map.get($colors, "muted-color"));
+$border-color: var(--border-color, map.get($colors, "border-color"));
+$shadow-color: var(--shadow-color, map.get($colors, "shadow-color"));
+$greyLight: var(--greyLight, map.get($colors, "greyLight"));
+$card-background: var(--card-background, map.get($colors, "card-background"));
+$card-block: var(--card-block, map.get($colors, "card-block"));
+$badge-inactive: var(--badge-inactive, map.get($colors, "badge-inactive"));
+$badge-inactive-background: var(--badge-inactive-background, map.get($colors, "badge-inactive-background"));
+$white: #FFF;
+
+// primary colors
+$primary: var(--primary, map.get($colors, "primary"));
+$primaryLight: var(--primaryLight, map.get($colors, "primaryLight"));
+$primaryLighter: var(--primaryLighter, map.get($colors, "primaryLighter"));
+$secondary: var(--secondary, map.get($colors, "secondary"));
+// ---- END
+
+// layout variables
+$layout: (
+  headerHeight: 60px,
+  footerHeight: 160px,
+  sidebarWidth: 200px,
+);
+
+$footerHeight: var(--footerHeight, map.get($layout, "footerHeight"));
+$headerHeight: var(--headerHeight, map.get($layout, "headerHeight"));
+$sidebarWidth: var(--sidebarWidth, map.get($layout, "sidebarWidth"));
+// ---- END
+
+// border variables
+$border-radius: 5px;
+// ---- END
+
+// font variables
+$font-size-small: 0.75rem;
+$font-size-medium: 0.875rem;
+$font-size-large: 1rem;
+$font-size-xlarge: 1.125rem;
+// 21px to 16px rem
+$font-size-title: 1.313rem;
+// 31px
+$font-size-header: 1.938rem;
+// ---- END
+
+// z index variables
+$zIndex: (
+  z-header: 200,
+  z-sidebar: 200,
+  z-backdrop: 899,
+  z-dropdown: 900,
+  z-modal: 900,
+  z-tooltip: 901,
+  z-popover: 901,
+  z-toast: 901,
+);
+
+$z-header: var(--z-header, map.get($zIndex, "z-header"));
+$z-sidebar: var(--z-sidebar, map.get($zIndex, "z-sidebar"));
+$z-modal: var(--z-modal, map.get($zIndex, "z-modal"));
+$z-tooltip: var(--z-tooltip, map.get($zIndex, "z-tooltip"));
+$z-popover: var(--z-popover, map.get($zIndex, "z-popover"));
+$z-toast: var(--z-toast, map.get($zIndex, "z-toast"));
+$z-dropdown: var(--z-dropdown, map.get($zIndex, "$z-dropdown"));
+$z-backdrop: var(--z-backdrop, map.get($zIndex, "z-backdrop"));
+// ---- END

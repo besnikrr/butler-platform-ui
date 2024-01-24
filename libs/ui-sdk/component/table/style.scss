@@ -1,0 +1,101 @@
+@import '../../style/variables.scss';
+
+.ui-table-container {
+  // display: inline-flex;
+}
+.ui-table-container table.ui-table {
+  width: 100%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-align: left;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: $text-primary;
+  font-size: $font-size-medium;
+
+
+  .ui-thead {
+    background: $greyLight;
+    .ui-th:first-child {
+      border-radius: $border-radius 0 0 0;
+    }
+    .ui-th:last-child {
+      border-radius: 0 $border-radius 0 0;
+    }
+  }
+
+  .ui-trow {
+    height: 45px;
+    &:first-child {
+      .ui-table-cell.ui-td {
+        border-top: none;
+      }
+    }
+    &:last-child {
+      .ui-table-cell.ui-td {
+        border-bottom: 1px solid $border-color;
+      }
+    }
+  }
+
+  .ui-table-cell {
+    &.ui-td {
+      border-top: 1px solid $border-color;
+      font-size: $font-size-medium;
+    }
+    &.ui-th {
+      font-style: normal;
+      font-weight: 600;
+      font-size: $font-size-medium;
+      border-bottom: 1px solid $border-color;
+    }
+    &:first-child {
+      border-left: 1px solid transparent;
+    }
+    &:last-child {
+      border-right: 1px solid transparent;
+    }
+
+    .ui-td-wrapper {
+      padding: 10px;
+      height: 45px;
+      max-height: 45px;
+      display: flex;
+      align-items: center;
+    }
+    .ui-action-btn {
+      display: inline-flex;
+      padding: 6px;
+			justify-content: center;
+			align-items: center;
+    }
+  }
+
+  .ui-tbody {
+    .ui-trow {
+      &:not(.ui-tr-nohover) {
+        &:hover, &.ui-hover {
+          border-radius: $border-radius;
+          // TODO: theme color
+          background: $theme-primaryLightest;
+          .ui-table-cell {
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+          }
+          .ui-td:first-child {
+            border-radius: $border-radius 0 0 $border-radius;
+          }
+          .ui-td:last-child {
+            border-radius: 0 $border-radius $border-radius 0;
+          }
+          // // delete-resource next row border
+          + .ui-trow {
+            .ui-table-cell {
+              border-top-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+}

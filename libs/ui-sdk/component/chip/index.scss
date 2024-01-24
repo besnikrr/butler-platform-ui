@@ -1,0 +1,27 @@
+@import '../../style/variables.scss';
+
+.ui-chip {
+  height: 30px;
+  padding: 0 10px;
+  border-radius: $border-radius;
+  background-color: $theme-primary;
+  color: $text-secondary;
+  font-size: $font-size-medium;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  .ui-btn {
+    display: inline-flex;
+    align-items: center;
+    color: inherit;
+    margin-left: auto;
+    padding-left: 10px;
+    flex-shrink: 0;
+  }
+	&-small {
+    min-width: 20px;
+		height: 20px;
+		padding: 0 5px;
+		font-size: $font-size-small;
+	}
+}

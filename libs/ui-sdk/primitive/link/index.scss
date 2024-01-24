@@ -1,0 +1,36 @@
+@import '../../style/variables.scss';
+
+.ui-link {
+  color: $primary;
+  text-decoration-line: underline;
+
+  &.ui-link-small {
+    font-size: $font-size-small;
+  }
+  &.ui-link-medium, &.ui-link-large {
+    font-size: $font-size-medium;
+  }
+  &.ui-link-xlarge {
+    font-size: $font-size-large;
+  }
+
+  &.ui-link-primary {
+    color: $text-primary;
+  }
+  &.ui-link-primary-light {
+    color: $primaryLight;
+  }
+  &.ui-link-secondary {
+    color: $text-secondary;
+  }
+  &.ui-link-danger {
+    color: $theme-danger;
+  }
+  &.ui-muted {
+    color: $muted-color;
+  }
+
+  &.ui-btn {
+    overflow: unset;
+  }
+}

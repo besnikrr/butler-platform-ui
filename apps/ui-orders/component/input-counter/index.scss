@@ -1,0 +1,23 @@
+@import "../../../../libs/ui-sdk/style/variables.scss";
+
+.ui-input-counter {
+  .ui-input {
+    text-align: center;
+  }
+  .ui-input-counter-button {
+    margin: -5px;
+    padding: 7px;
+  }
+  
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+}

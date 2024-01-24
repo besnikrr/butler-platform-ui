@@ -1,0 +1,67 @@
+@import '../../style/variables.scss';
+
+.ui-checkbox-wrapper {
+  margin: 0;
+  padding: 0;
+  font-size: $font-size-medium;
+  display: inline-flex;
+  line-height: unset;
+  cursor: pointer;
+  touch-action: manipulation;
+  align-items: center;
+  .ui-checkbox-label {
+    padding: 0 10px;
+    color: $text-primary;
+  }
+  
+  .ui-checkbox {
+    background-color: $white;
+    border-radius: $border-radius;
+    margin: 0;
+    padding: 0;
+    color: $text-primary;
+    font-size: $font-size-medium;
+    list-style: none;
+    position: relative;
+    display: inline-flex;
+    line-height: 1;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    // TODO: define sizing
+    width: 20px;
+    height: 20px;
+    // TODO: theme colors
+    border: 1px solid $border-color;
+    padding: 2px;
+
+    input[type='checkbox'] {
+      // display: none;
+    }
+  }
+  .ui-checkmark {
+    visibility: hidden;
+  }
+
+  &:hover {
+    .ui-checkbox {
+      border: 1.5px solid $theme-primaryLighter;
+    }
+    &.ui-checkbox-disabled, .ui-checkbox-checked {
+      border: none;
+    }
+  }
+
+  &.ui-checkbox-checked {
+    .ui-checkbox {
+      color: $white;
+      background-color: $theme-primary;
+      border: none;
+    }
+    .ui-checkmark {
+      visibility: visible;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "root": "apps/ui-orders",
+  "sourceRoot": "apps/ui-orders",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/ui-orders",
+        "index": "apps/ui-orders/index.html",
+        "baseHref": "/",
+        "main": "apps/ui-orders/main.tsx",
+        "polyfills": "apps/ui-orders/polyfills.ts",
+        "tsConfig": "apps/ui-orders/tsconfig.app.json",
+        "styles": [
+          "apps/ui-orders/styles.scss"
+        ],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/ui-orders/.env",
+              "with": "apps/ui-orders/.env.prod"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "ui-orders:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "ui-orders:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/ui-orders/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/apps/ui-orders"
+      ],
+      "options": {
+        "jestConfig": "apps/ui-orders/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

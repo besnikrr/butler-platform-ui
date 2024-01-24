@@ -1,0 +1,61 @@
+@import './../../libs/ui-sdk/style/variables.scss';
+
+.main-app-list {
+  width: 362px !important;
+
+  .main-app-card {
+    &:hover {
+      background: $theme-primaryLighter;
+    }
+
+    .main-app-card-icon {
+      height: 40px;
+      width: 40px;
+    }
+  }
+}
+
+.main-alert-settings {
+  width: 230px;
+
+  .alert-settings-wrap {
+    padding: 10px;
+
+    .orange-dot {
+      background-color: #FF9039;
+      height: 5px;
+      width: 5px;
+    }
+
+    &:hover {
+      background: $theme-primaryLighter;
+    }
+  }
+}
+
+.main-user-settings {
+  width: 160px;
+}
+
+.user {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 40px;
+  width: 40px;
+}
+
+.ui-header-nav-input-search {
+  color: $white !important;
+  &::placeholder{
+    color: $white;
+  }
+}
+
+.main-sidebar-wrapper {
+  .ui-btn {
+    padding-left: 10px;
+  }
+  .ui-btn + .ui-btn {
+    margin-top: 10px;
+  }
+}

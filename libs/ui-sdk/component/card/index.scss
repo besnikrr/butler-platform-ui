@@ -1,0 +1,37 @@
+@import '../../style/variables.scss';
+
+.ui-card {
+  background: $card-background;
+  box-shadow: $shadow-color 0px 2px 3px;
+  border-radius: 5px;
+
+  padding: 30px;
+
+  &.ui-card-page {
+    padding-top: 20px;
+    padding-right: 20px;
+  }
+
+  .ui-card-header {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // TODO: define sizing
+  &-xsmall {
+    padding: 5px;
+  }
+  &-small {
+    padding: 10px;
+  }
+  &-medium {
+    padding: 20px;
+  }
+  &-large {
+    padding: 40px;
+  }
+}

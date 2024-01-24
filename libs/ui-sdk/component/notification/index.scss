@@ -1,0 +1,27 @@
+@import '../../style/variables.scss';
+
+.ui-notification {
+  .ui-notification-content {
+    width: 250px;
+  }
+
+  .ui-notification-content-text {
+    span {
+      word-break: break-word;
+    }
+  }
+
+  .ui-notification {
+    &-error {
+      background-color: $theme-dangerLighter;
+      color: $theme-danger;
+      border: 1px solid $theme-dangerLight;
+    }
+    &-warning {
+      border: 1px solid $theme-dangerLight;
+    }
+    &-success, &-info {
+      border: 1px solid $border-color;
+    }
+  }
+}

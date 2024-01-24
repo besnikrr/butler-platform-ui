@@ -1,0 +1,8 @@
+@import 'libs/ui-sdk/style/variables.scss';
+
+.sq-focus {
+  iframe {
+    box-shadow: $theme-inputHighlight 0px 0px 5px;
+    border-color: $theme-inputHighlight;
+  }
+}

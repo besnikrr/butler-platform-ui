@@ -1,0 +1,44 @@
+@import '../../style/variables.scss';
+
+.ui-btn {
+  font-size: $font-size-medium;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  border-radius: $border-radius;
+  background-color: transparent;
+  color: $text-primary;
+  
+  &-xsmall {
+    padding: 5px;
+    font-size: $font-size-small;
+    height: 20px;
+    min-width: 20px;
+  }
+  &-small {
+    padding: 8px 10px;
+    font-size: $font-size-small;
+    height: 30px;
+    min-width: 30px;
+  }
+  &-medium {
+    padding: 11px 15px;
+    height: 40px;
+    min-width: 40px;
+  }
+  &-large {
+    padding: 14px 20px;
+    height: 45px;
+    min-width: 45px;
+  }
+  &-xlarge {
+    padding: 14px 20px;
+    font-size: $font-size-large;
+    height: 50px;
+    min-width: 50px;
+  }
+}

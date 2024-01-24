@@ -1,0 +1,192 @@
+@import '../../style/variables.scss';
+
+.ui-toggle-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 14px;
+
+  .ui-toggle-label {
+    margin-bottom: 15px;
+  }
+
+  .ui-toggle {
+    touch-action: pan-x;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    .ui-toggle-input {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    .ui-toggle-check, .ui-toggle-uncheck {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 0;
+      bottom: 0;
+      margin-top: auto;
+      margin-bottom: auto;
+      line-height: 0;
+      opacity: 0;
+      transition: opacity .25s ease;
+    }
+
+    .ui-toggle-check {
+      left: 8px;
+    }
+
+    .ui-toggle-uncheck {
+      opacity: 1;
+      right: 10px;
+    }
+
+    .ui-toggle-uncheck span,
+    .ui-toggle-check span {
+      align-items: center;
+      display: flex;
+      height: 10px;
+      justify-content: center;
+      position: relative;
+      width: 10px;
+    }
+
+    .ui-toggle-container {
+      width: 53px;
+      height: 30px;
+      padding: 0;
+      border-radius: 30px;
+      background-color: $greyLight;
+      transition: all .2s ease;
+    }
+
+    .ui-toggle-container-small {
+      width: 36px;
+      height: 20px;
+    }
+
+    .ui-toggle-circle {
+      transition: all .5s cubic-bezier(.23,1,.32,1) 0ms;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 3px;
+      bottom: 3px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: $white;
+      transition: all .25s ease;
+
+      .ui-toggle-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        pointer-events: none;
+        color: $theme-primary;
+      }
+    }
+
+    .ui-toggle-circle-small {
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &.ui-toggle-disabled {
+    opacity: .5;
+    pointer-events: none;
+  }
+
+  &.ui-toggle-checked {
+    .ui-toggle-container {
+      background-color: $theme-primary;
+    }
+  }
+
+  &.ui-toggle-checked {
+    .ui-toggle-check {
+      opacity: 1;
+    }
+  }
+
+  &.ui-toggle-checked {
+    .ui-toggle-uncheck {
+      opacity: 0;
+    }
+  }
+
+  &.ui-toggle-checked {
+    .ui-toggle-circle {
+      left: 26px;
+    }
+  }
+
+  &.ui-toggle-checked {
+    .ui-toggle-circle-small {
+      left: 17px;
+    }
+  }
+
+  &.ui-toggle-switch {
+    .ui-toggle {
+      padding: 10px 0;
+    }
+    .ui-toggle-container {
+      height: 1px;
+      width: 40px;
+    }
+
+    .ui-toggle-container-small {
+      width: 28px;
+    }
+
+    .ui-toggle-circle {
+      left: 0;
+      background-color: $greyLight;
+    }
+  }
+
+  &.ui-toggle-switch.ui-toggle-checked {
+    .ui-toggle-circle {
+      left: 18px;
+      background-color: $theme-primary;
+    }
+
+    .ui-toggle-circle-small {
+      left: 13px;
+    }
+  }
+}
+
+.ui-skeleton-wrapper {
+  overflow: hidden;
+}
+
+.skeleton-rounded {
+  border-radius: 34px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.skeleton-label {
+  margin-bottom: 15px;
+}

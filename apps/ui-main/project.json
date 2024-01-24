@@ -1,0 +1,139 @@
+{
+  "root": "apps/ui-main",
+  "sourceRoot": "apps/ui-main",
+  "projectType": "application",
+  "targets": {
+
+    "build": {
+      "executor": "@nrwl/web:build",
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/ui-main",
+        "index": "apps/ui-main/index.html",
+        "baseHref": "/",
+        "main": "apps/ui-main/main.tsx",
+        "polyfills": "apps/ui-main/polyfills.ts",
+        "tsConfig": "apps/ui-main/tsconfig.app.json",
+        "assets": [
+          "apps/ui-main/favicon.ico",
+          "apps/ui-main/traits.yml"
+        ],
+        "styles": ["apps/ui-main/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/ui-main/.env",
+              "with": "apps/ui-main/.env.production"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "ui-main:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "ui-main:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/ui-main/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "apps/ui-main/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "export timestamp=$(echo $(date +\"%s.%3N\") | awk '{print $1*1000}') && aws s3 sync . s3://{args.s3-bucket}/versions/$timestamp-{args.ui-version} --exclude 'traits.yaml' --delete",
+            "forwardAllArgs": false
+          },
+          {
+            "command": "aws s3 sync s3://{args.s3-bucket}/live s3://{args.s3-bucket}/previous --delete",
+            "forwardAllArgs": false
+          },
+          {
+            "command": "aws s3 sync . s3://{args.s3-bucket}/live --exclude 'traits.yaml' --delete",
+            "forwardAllArgs": false
+          },
+          {
+            "command": "aws cloudfront create-invalidation --distribution-id {args.distribution-id} --paths \"/*\"",
+            "forwardAllArgs": false
+          }
+        ],
+        "cwd": "dist/apps/ui-main",
+        "parallel": false
+      }
+    },
+    "rollback": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "aws s3 sync s3://{args.s3-bucket}/previous s3://{args.s3-bucket}/live --delete",
+            "forwardAllArgs": false
+          },
+          {
+            "command": "aws cloudfront create-invalidation --distribution-id {args.distribution-id} --paths \"/*\"",
+            "forwardAllArgs": false
+          }
+        ],
+        "cwd": "dist/apps/ui-main",
+        "parallel": false
+      }
+    },
+
+    "pipeline-deploy": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "pdwrapper deploy-ui --stage {args.stage} --s3-bucket {args.s3-bucket} --version {args.ui-version} --distribution-id {args.distribution-id}",
+            "forwardAllArgs": false
+          }
+        ],
+        "cwd": "dist/apps/ui-main",
+        "parallel": false
+      }
+    },
+    "pipeline-rollback": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "pdwrapper rollback-ui -s {args.stage}",
+            "forwardAllArgs": false
+          }
+        ],
+        "cwd": "dist/apps/ui-main",
+        "parallel": false
+      }
+    }
+  },
+  "tags": []
+}

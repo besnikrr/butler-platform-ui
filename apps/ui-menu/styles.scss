@@ -1,0 +1,82 @@
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  .menu-content + .menu-content {
+    margin-top: 10px;
+  }
+}
+
+.menu-content {
+  width: 100%;
+  flex: 1;
+  > .ui-row {
+    margin-top: 0;
+  }
+
+  form > .ui-form-control + .ui-form-control {
+    margin-top: 10px;
+  }
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+.ui-row + .ui-row {
+  margin-top: 0;
+}
+
+.form-bottom-action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  > .ui-btn + .ui-btn {
+    margin-left: 10px;
+  }
+}
+
+.menu-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.menu-view-header {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+}
+
+.menu-container {
+  > .ui-row > .ui-col {
+    > .ui-card + .ui-card {
+      margin-top: 10px;
+    }
+  }
+}
+
+.menu-text-capitalize {
+  text-transform: capitalize;
+}
+
+.menu-no-permissions {
+  flex: 1;
+}
+
+.subcategory-label {
+	.ui-form-control-label {
+		width: 110px !important;
+	}
+}

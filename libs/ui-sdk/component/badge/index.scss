@@ -1,0 +1,16 @@
+@import '../../style/variables.scss';
+
+.ui-badge {
+	background-color: $theme-primaryLighter;
+	color: $text-primary;
+	&.ui-chip-large {
+		height: auto;
+		min-height: 30px;
+		padding: 5px 10px;
+	}
+}
+
+.ui-badge-inactive {
+	background-color: $badge-inactive-background;
+	color: $badge-inactive;
+}

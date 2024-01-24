@@ -1,0 +1,36 @@
+@import "../../../style/variables";
+
+.sign-in-page-wrapper {
+  min-height: calc(100vh - var(--footerHeight, 100px));
+  padding: calc(var(--headerHeight, 60px) + 60px) 20px 20px 20px;
+
+  .butler-logo {
+    text-align: center;
+  }
+
+  .form-wrapper {
+    max-width: 406px;
+    margin: 0 auto;
+
+    .form-button-wrapper {
+      padding-top: 10px;
+
+      button {
+        text-align: center;
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .ui-sign-in-error-message {
+      font-size: 14px;
+    }
+
+    .forgot-password-link {
+      margin: 10px 0px;
+      display: inline-block;
+      width: 100%;
+      text-align: right;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import '../../style/variables.scss';
+
+.ui-input {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  font-size: $font-size-medium;
+  // font-family: $font-family-base; // TODO: add font-family-base
+  color: inherit;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+}

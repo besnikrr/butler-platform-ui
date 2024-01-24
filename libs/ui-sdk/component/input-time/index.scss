@@ -1,0 +1,82 @@
+@import '../../style/variables.scss';
+
+.ui-time-list-wrapper {
+  display: flex;
+
+  & > .ui-list {
+    flex: 1;
+    padding: 10px;
+    height: 168px;
+    overflow-y: auto;
+    .ui-list-item {
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .ui-list:nth-child(2) {
+    border-right: 1px solid $border-color;
+    border-left: 1px solid $border-color;
+  }
+}
+
+.ui-input-time-trigger {
+  position: relative;
+  height: 40px;
+  font-size: $font-size-medium;
+  background: #FFFFFF;
+  border: 1px solid $border-color;
+  box-sizing: border-box;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 10px;
+
+  .ui-icon {
+    // define theme color
+    color: #a9a9a9;
+  }
+
+  &.ui-select-error {
+    border-color: $theme-danger;
+    color: $theme-danger;
+    .ui-icon {
+      color: $theme-danger;
+    }
+  }
+}
+
+.ui-input-time {
+  .ui-card {
+    box-shadow: none !important;
+    padding: 0;
+    border: 1px solid $border-color;
+    overflow: hidden;
+    filter: none !important;
+  }
+  .ui-list {
+    overflow-x: hidden;
+    margin-right: -17px;
+    padding-right: 27px;
+    background: white;
+    width: 68px;
+    z-index: 1;
+    & + .ui-list {
+      border-left: 1px solid $border-color;
+    }
+    .ui-list-item {
+      font-size: $font-size-medium;
+      padding: 0 5px;
+      &[hidden] {
+        display: none;
+      }
+    }
+  }
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator { background: none; display:none; }

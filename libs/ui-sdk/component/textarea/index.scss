@@ -1,0 +1,21 @@
+@import '../../style/variables.scss';
+
+.ui-textarea {
+  position: relative;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  display: inline-flex;
+  align-items: center;
+  color: $text-primary;
+  resize: none;
+  padding: 10px;
+  font-family: inherit;
+  &:hover {
+    cursor: text;
+  }
+  &:active, &:focus {
+    outline: none;
+    box-shadow: $theme-inputHighlight 0px 0px 5px;
+    border-color: $theme-inputHighlight;
+  }
+}

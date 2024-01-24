@@ -1,0 +1,12 @@
+{
+  "name": "@butlerhospitality/shared",
+  "version": "0.0.1",
+  "main": "./index.js",
+  "typings": "./index.d.ts",
+  "dependencies": {},
+  "peerDependencies": {
+    "yup": "^0.32.11",
+    "axios": "^0.26.1",
+    "qs": "^6.10.3"
+  }
+}

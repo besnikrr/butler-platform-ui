@@ -1,0 +1,1 @@
+{"version":3,"file":"get-table-name.js","sourceRoot":"","sources":["../../../../libs/shared/utils/get-table-name.ts"],"names":[],"mappings":";;;AAAA,MAAM,YAAY,GAAG,CACnB,QAAgB,EAChB,SAAS,GAAG,IAAI,EACI,EAAE;IACtB,OAAO,SAAS,IAAI,GAAG,OAAO,CAAC,GAAG,CAAC,KAAK,IAAI,OAAO,CAAC,GAAG,CAAC,KAAK,IAAI,QAAQ,EAAE,CAAC;AAC9E,CAAC,CAAC;AACO,oCAAY"}

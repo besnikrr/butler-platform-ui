@@ -1,0 +1,17 @@
+.dashboard-card-content {
+  width: 220px;
+  height: 206px;
+  .app-card {
+    height: 80px;
+    width: 80px;
+  }
+  &:hover{
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.dashboard-wrapper {
+  max-width: 920px;
+  height: 100%;
+  width: 100%;
+}

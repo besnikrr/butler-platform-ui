@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "projects": {
+    "shared": "libs/shared",
+    "ui-dashboard": "apps/ui-dashboard",
+    "ui-iam": "apps/ui-iam",
+    "ui-main": "apps/ui-main",
+    "ui-menu": "apps/ui-menu",
+    "ui-network": "apps/ui-network",
+    "ui-sdk": "libs/ui-sdk",
+    "ui-voucher": "apps/ui-voucher",
+    "ui-orders": "apps/ui-orders"
+  }
+}

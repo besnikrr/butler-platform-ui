@@ -1,0 +1,73 @@
+@import '../../style/variables.scss';
+
+.ui-pagination-wrapper {
+  display: flex;
+  .ui-pagination-page-wrapper {
+    border: 1px solid $border-color;
+    margin-right: 5px;
+    cursor: pointer;
+    min-width: 30px;
+    height: 30px;
+    font-size: $font-size-medium;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    padding: 0 5px;
+    &:hover {
+      background-color: $theme-primaryLighter;
+      border-color: transparent;
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
+    &.ui-pagination-page-active {
+      color: $theme-secondary;
+      background-color: $theme-primary;
+      border: none;
+    }
+  }
+
+  .ui-pagination-dots {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    & .ui-pagination-dots-button {
+      font-size: $font-size-medium;
+      text-align: center;
+      color: $muted-color;
+      font-style: normal;
+      font-weight: normal;
+      background: none;
+      box-shadow: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & > svg {
+        transition: .2s all;
+        position: absolute;
+        opacity: 0;
+      }
+      & > span {
+        transition: .2s all;
+        opacity: 1;
+      }
+      &:hover {
+        & > svg {
+          opacity: 1;
+        }
+        & > span {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

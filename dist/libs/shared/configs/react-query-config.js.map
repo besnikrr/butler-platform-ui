@@ -1,0 +1,1 @@
+{"version":3,"file":"react-query-config.js","sourceRoot":"","sources":["../../../../libs/shared/configs/react-query-config.ts"],"names":[],"mappings":";;;AAAa,QAAA,WAAW,GAAG;IACzB,gBAAgB,EAAE,KAAK;IACvB,oBAAoB,EAAE,IAAI;IAC1B,cAAc,EAAE,KAAK;IACrB,kBAAkB,EAAE,IAAI;IACxB,KAAK,EAAE,KAAK;IACZ,SAAS,EAAE,CAAC,GAAG,EAAE,GAAG,IAAI;CACzB,CAAC"}

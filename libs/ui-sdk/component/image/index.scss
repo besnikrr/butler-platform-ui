@@ -1,0 +1,25 @@
+@import '../../style/variables.scss';
+
+.ui-img {
+  object-fit: cover;
+  position: relative;
+  font-size: 0;
+  border-radius: $border-radius;
+  overflow: hidden;
+  &::before {
+    content: url("data:image/svg+xml,<svg width='25' viewBox='0 0 29 29' xmlns='http://www.w3.org/2000/svg' fill='none'><rect x='1' y='1' width='27' height='27' stroke='lightGrey' stroke-width='1.5' stroke-linejoin='round' /><path d='M4.64844 18.5135L8.12539 15.1455L10.4434 17.3909L16.8178 11.2162L24.3511 18.5135' stroke='lightGrey' stroke-width='1.5' /></svg>");
+    background-color: rgb(255, 255, 255);
+    display: block;
+    position: absolute;
+    z-index: 0;
+    padding: 1px;
+    border-radius: $border-radius;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

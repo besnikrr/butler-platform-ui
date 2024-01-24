@@ -1,0 +1,60 @@
+@import '../../style/variables.scss';
+
+.ui-input-wrapper {
+  background-color: $white;
+  position: relative;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  display: inline-flex;
+  align-items: center;
+  color: $text-primary;
+  &:hover, &.ui-hover {
+    cursor: text;
+  }
+  &:active, &:focus-within {
+    outline: none;
+    // TODO theme primary 0.5 op.
+    box-shadow: $theme-inputHighlight 0px 0px 5px;
+    border-color: $theme-inputHighlight;
+  }
+
+  // input sizes
+  &.ui-input {
+    &-medium {
+      height: 40px;
+      padding: 10px;
+    }
+    &-small {
+      height: 30px;
+      padding: 5px;
+    }
+    &-large {
+      height: 50px;
+      padding: 15px 10px;
+    }
+  }
+
+  // prefix/suffix styles
+  .ui-input {
+		flex: 1;
+    width: 100%;
+    &-suffix {
+      margin-left: 5px;
+    }
+    &-prefix {
+      margin-right: 5px;
+    }
+    &-suffix, &-prefix {
+      pointer-events: none;
+			display: flex;
+    }
+  }
+
+  &.ui-input-error {
+    border-color: $theme-danger;
+    color: $theme-danger;
+  }
+  &.ui-input-ghost {
+    border-color: transparent;
+  }
+}

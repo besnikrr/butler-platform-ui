@@ -1,0 +1,43 @@
+@import '../../style/variables.scss';
+
+.ui-typography {
+  color: $text-primary;
+  &-muted {
+    color: $muted-color;
+  }
+  &-bold {
+    font-weight: bold;
+  }
+  &.ui-span {
+    font-size: $font-size-medium;
+
+    &.ui-typography-large {
+      font-size: $font-size-large;
+    }
+    &.ui-typography-small {
+      font-size: $font-size-small;
+    }
+  }
+  &.ui-p {
+    font-size: $font-size-small;
+    line-height: 20px;
+    &.ui-typography-large {
+      font-size: $font-size-medium;
+      line-height: 22px;
+    }
+  }
+  &.ui-h1 {
+    font-size: $font-size-header;
+  }
+  &.ui-h2 {
+    font-size: $font-size-title;
+  }
+  &.ui-h1, &.ui-h2 {
+    font-weight: normal;
+    margin: 0;
+  }
+  &.ui-label {
+    font-size: $font-size-medium;
+  }
+}
+

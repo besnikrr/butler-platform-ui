@@ -1,0 +1,26 @@
+@import '../../style/variables.scss';
+
+.ui-collapsible {
+  overflow: hidden;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+
+  &-toolbar {
+    height: 45px;
+    border-radius: 0;
+    background-color: $greyLight;
+
+    .ui-icon {
+      color: $muted-color;
+    }
+  }
+  &-body {
+    display: none;
+  }
+
+  &.open {
+    .ui-collapsible-body {
+      display: block;
+    }
+  }
+}

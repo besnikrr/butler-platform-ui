@@ -1,0 +1,29 @@
+@import '../../style/variables.scss';
+
+.ui-modal-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: $z-modal;
+  transform: translate(-50%, -50%);
+  max-height: 95vh;
+  overflow: auto;
+}
+
+.ui-modal{
+  background: #FFFFFF;
+  border: 1px solid #F3F3F3;
+  box-sizing: border-box;
+  box-shadow: $shadow-color 0px 2px 30px;
+  font-size: $font-size-medium;
+}
+
+.ui-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: $z-modal;
+}

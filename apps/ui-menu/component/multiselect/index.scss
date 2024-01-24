@@ -1,0 +1,91 @@
+@import 'libs/ui-sdk/style/variables.scss';
+
+.ui-select-trigger {
+  position: relative;
+  // TODO: define sizing
+  height: 40px;
+
+  font-size: 14px;
+
+  // TODO: define theme color
+  background: #FFFFFF;
+  border: 1px solid $border-color;
+  box-sizing: border-box;
+  border-radius: $border-radius;
+  cursor: pointer;
+  &.ui-select-open {
+    border-radius: 5px 5px 0 0;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 10px;
+  // width: ;
+
+  .ui-icon {
+    color: #a9a9a9;
+  }
+
+  &.ui-select-error {
+    border-color: $theme-danger;
+    color: $theme-danger;
+    .ui-icon {
+      color: $theme-danger;
+    }
+  }
+}
+
+.ui-select-suffix {
+  display: flex;
+  align-items: center;
+  right: 0;
+  > * + * {
+    margin-left: 10px;
+  }
+}
+
+.ui-select {
+  z-index: $z-dropdown;
+  .ui-card {
+    box-shadow: none !important;
+    padding: 0;
+    border-radius: 0 0 5px 5px !important;
+    border: 1px solid $border-color;
+    border-top: none;
+    overflow: hidden;
+    filter: none !important;
+    padding: 5px;
+  }
+  .ui-list .ui-list-item {
+    font-size: 14px;
+    padding: 0 5px;
+    &[hidden] {
+      display: none;
+    }
+  }
+}
+
+.selectselect {
+  display: none;
+  pointer-events: none;
+  position: absolute;
+  opacity: 0;
+}
+
+.ui-select-multi-wrapper {
+  margin-top: -5px;
+  margin-left: -10px;
+  .ui-chip {
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: $font-size-small;
+  }
+}
+
+.ui-select-trigger-multiple {
+  height: auto;
+  padding: 4px 10px;
+  min-height: 40px;
+}

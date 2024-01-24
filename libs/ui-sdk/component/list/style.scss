@@ -1,0 +1,21 @@
+@import '../../style/variables';
+
+.ui-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  .ui-list-item {
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-size: $font-size-large;
+    color: $text-primary;
+    background-color: transparent;
+    border-radius: $border-radius;
+    cursor: pointer;
+    &-selected, &:hover, &.ui-hover {
+      background-color: $theme-primaryLighter;
+    }
+  }
+}

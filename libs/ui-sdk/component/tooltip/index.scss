@@ -1,0 +1,32 @@
+@import '../../style/variables.scss';
+
+.ui-tooltip-wrapper {
+  .ui-tooltip {
+    border: 1px solid $greyLight;
+    box-shadow: $shadow-color 0px 2px 15px;
+    font-size: $font-size-small;
+    padding: 5px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    span {
+      position: relative;
+    }
+    &.ui-arrow-left::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: auto;
+      left: 0px;
+      width: 12px;
+      height: 12px;
+      background-color: $card-background;
+      transform: translate(-50%, -50%) rotate(-45deg) skew(17deg, 17deg);
+      border-top: 1px solid $greyLight;
+      border-left: 1px solid $greyLight;
+      z-index: 0;
+      border-radius: $border-radius 0 0 0;
+    }
+  }
+}

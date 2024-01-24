@@ -1,0 +1,12 @@
+
+@import "../../../../libs/ui-sdk/style/variables.scss";
+
+.orders-app-history-filters {
+  height: calc(100vh - $headerHeight - 20px);
+}
+
+.orders-app-history-filters-form {
+  > .ui-form-control + .ui-form-control {
+    margin-top: 10px;
+  }
+}

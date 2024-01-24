@@ -1,0 +1,60 @@
+@import '../../style/variables.scss';
+
+.ui-radio-wrapper {
+  margin: 0;
+  padding: 0;
+  font-size: $font-size-medium;
+  display: inline-flex;
+  line-height: unset;
+  cursor: pointer;
+  touch-action: manipulation;
+  align-items: center;
+  
+  .ui-radio-label {
+    padding: 0 10px;
+    color: $text-primary;
+  }
+  
+  .ui-radio {
+    border-radius: 100%;
+    margin: 0;
+    padding: 0;
+    color: $text-primary;
+    font-size: $font-size-medium;
+    list-style: none;
+    position: relative;
+    display: inline-flex;
+    line-height: 1;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    // TODO: define sizing
+    width: 20px;
+    height: 20px;
+    // TODO: theme colors
+    border: 2px solid $theme-primaryLightest;
+    padding: 2px;
+
+    input[type="radio"] {
+      display: none;
+    }
+  }
+
+  &:hover {
+    .ui-radio {
+      border-color: $theme-primaryLighter;
+    }
+    &.ui-radio-disabled, .ui-radio-checked {
+      border: none;
+    }
+  }
+
+  &.ui-radio-checked {
+    .ui-radio {
+      color: $white;
+      border: 5px solid $theme-primary;
+    }
+  }
+}

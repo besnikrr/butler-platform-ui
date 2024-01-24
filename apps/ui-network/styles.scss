@@ -1,0 +1,83 @@
+@import './../../libs/ui-sdk/style/variables.scss';
+
+.network-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  .network-content + .network-content {
+    margin-top: 10px;
+  }
+}
+
+.network-content {
+  width: 100%;
+  flex: 1;
+
+  > .ui-row {
+    margin-top: 0;
+  }
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+.ui-row + .ui-row {
+  margin-top: 0;
+}
+
+.form-bottom-action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  > .ui-btn + .ui-btn {
+    margin-left: 10px;
+  }
+}
+
+.network-sidebar-wrapper {
+  .ui-btn + .ui-btn {
+    margin-top: 10px;
+  }
+}
+
+
+.network-three-dots-title {
+  max-width: 147px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.network-link-no-underline {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.network-action-dropdown {
+  width: 160px;
+}
+
+
+.network-no-permissions {
+  flex: 1;
+}
+
+.network-inactive-badge {
+  background-color: $theme-dangerLighter;
+  color: $theme-danger;
+}
+
+.network-type-tooltip {
+  .ui-tooltip {
+      height: 100%;
+  }
+}

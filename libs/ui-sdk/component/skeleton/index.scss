@@ -1,0 +1,195 @@
+@import '../../style/variables.scss';
+
+.ui-skeleton::before {
+	background: linear-gradient(to right, transparent 0%, $theme-primaryLighter, transparent 100%);
+	animation: load .7s linear infinite;
+	content: '';
+	display: block;
+	position: absolute;
+	left: -170px;
+	top: 0;
+	height: 100%;
+	width: 150px;
+}
+.ui-skeleton  {
+	position: relative;
+	overflow: hidden;
+}
+.ui-sk + .ui-sk {
+	margin-top: 20px;
+}
+
+@keyframes load {
+	from {
+			left: -150px;
+	}
+	to   {
+			left: 100%;
+	}
+}
+
+.ui-skeleton {
+	height: 40px;
+	width: 40px;
+	background-color: $theme-primaryLighter;
+	border-radius: $border-radius;
+}
+
+.ui-skeleton-field {
+	.ui-skeleton {
+		width: 400px;
+		height: 40px;
+
+		&.small {
+			height: 20px;
+			width: 200px;
+		}
+	}
+
+	> * + * {
+		margin-top: 10px;
+	}
+}
+
+.ui-skeleton-button {
+	.ui-skeleton {
+		width: 130px;
+		height: 40px;
+
+		&.small {
+			width: 100px;
+		}
+	}
+
+	> * + * {
+		margin-top: 10px;
+	}
+}
+
+.ui-skeleton-title {
+	.ui-skeleton {
+		width: 200px;
+		height: 22px;
+		margin-bottom: 10px;
+
+		&.small {
+			height: 20px;
+			width: 200px;
+		}
+	}
+
+	> * + * {
+		margin-top: 10px;
+	}
+}
+
+.ui-skeleton-text {
+	.ui-skeleton {
+		width: 50%;
+		height: 14px;
+	}
+
+	> .ui-skeleton + .ui-skeleton {
+		margin-top: 5px;
+		width: 20%;
+	}
+}
+
+.ui-skeleton-label-field {
+	.ui-skeleton {
+		width: 250px;
+		height: 20px;
+		&.small {
+      margin-top: 5px;
+			width: 150px;
+			height: 14px;
+		}
+	}
+	> .ui-skeleton + .ui-skeleton {
+		margin-top: 5px;
+	}
+}
+
+.ui-skeleton-header {
+	align-items: flex-end;
+	.ui-skeleton:first-child {
+		width: 120px;
+		height: 22px;
+	}
+	.ui-skeleton:last-child {
+		width: 100px;
+		height: 22px;
+	}
+}
+
+.ui-skeleton-card-header-act {
+	align-items: center;
+	.ui-skeleton:first-child {
+		width: 120px;
+		height: 22px;
+	}
+	.ui-skeleton:last-child {
+		width: 100px;
+	}
+}
+
+.ui-skeleton-table {
+	.ui-skeleton-row {
+		display: flex;
+		width: 100%;
+	}
+	.ui-skeleton-row + .ui-skeleton-row {
+		margin-top: 5px;
+	}
+	.ui-skeleton {
+		flex: 1;
+		height: 45px;
+		& + .ui-skeleton {
+			margin-left: 5px;
+		}
+	}
+	.ui-skeleton-toolbar {
+		display: flex;
+		margin-bottom: 20px;
+		.ui-skeleton {
+			width: 100%;
+			height: 35px;
+			flex: 0 1 100px;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.ui-skeleton-block {
+	&.ui-skeleton {
+		width: 100%;
+		height: 220px;
+	}
+}
+
+.ui-skeleton-app-card {
+	.ui-skeleton-row {
+		display: flex;
+		width: 100%;
+	}
+	.ui-skeleton-row + .ui-skeleton-row {
+		margin-top: 5px;
+	}
+	.ui-skeleton {
+		flex: 1;
+		height: 200px;
+		& + .ui-skeleton {
+			margin-left: 5px;
+		}
+	}
+	.ui-skeleton-toolbar {
+		display: flex;
+		margin-bottom: 20px;
+		.ui-skeleton {
+			width: 100%;
+			height: 35px;
+			flex: 0 1 100px;
+			margin-bottom: 10px;
+		}
+	}
+}

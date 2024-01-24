@@ -1,0 +1,13 @@
+.ui-input-addon {
+  padding: 5px;
+  margin: -5px;
+  
+  &-left {
+    display: inline-flex;
+    margin-right: 10px;
+  }
+  &-right {
+    display: inline-flex;
+    margin-left: 10px;
+  }
+}

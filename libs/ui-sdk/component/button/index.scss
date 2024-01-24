@@ -1,0 +1,68 @@
+@import "../../style/variables.scss";
+
+.ui-btn {
+  text-align: left;
+  display: inline-flex;
+  position: relative;
+  .ui-btn-icon-left {
+    margin-right: 10px;
+    display: flex;
+  }
+  .ui-btn-icon-right {
+    margin-left: 10px;
+    display: flex;
+  }
+  &.ui-icon-only {
+    align-items: center;
+    justify-content: center;
+    .ui-icon {
+      position: absolute;
+    }
+  }
+
+  &-primary {
+    color: $text-secondary;
+    background-color: $theme-primary;
+    &:hover, &.ui-hover {
+      background-color: $theme-primaryLight;
+    }
+  }
+  &-secondary {
+    color: $text-primary;
+    background-color: $theme-secondary;
+    &:hover, &.ui-hover {
+      background-color: $theme-secondaryLight;
+    }
+  }
+  &-danger {
+    color: $text-secondary;
+    background-color: $theme-danger;
+    &:hover, &.ui-hover {
+      background-color: $theme-dangerLight;
+    }
+  }
+  &-ghost {
+    color: $text-primary;
+    background-color: transparent;
+    &:hover, &.ui-hover {
+      background-color: $theme-primaryLighter;
+    }
+  }
+  &-danger-ghost {
+    color: $theme-danger;
+    background-color: transparent;
+    &:hover, &.ui-hover {
+      background-color: $theme-dangerLighter;
+    }
+  }
+  &-muted {
+    color: $muted-color;
+    // on hover if class not danger or danger-ghost
+    &:hover, &.ui-hover {
+      color: $text-primary;
+      &.ui-btn-danger-ghost {
+        color: $theme-danger;
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+@import "../../../../libs/ui-sdk/style/variables.scss";
+
+.menu-ordered-list {
+  max-width: 200px;
+  width: 100%;
+
+  .menu-sub-order-item + .menu-sub-order-item {
+    margin-top: 10px;
+  }
+}
+
+.menu-category-collapsible + .menu-category-collapsible {
+  margin-top: 10px;
+}
+
+.menu-sub-order-item {
+  border: 1px solid $border-color;
+  word-break: break-all;
+  white-space: initial;
+  min-height: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  .ui-icon {
+    display: flex;
+    min-width: 30px;
+  }
+
+  &.active {
+    background-color: $theme-primary;
+    color: $text-secondary;
+  }
+
+  &.drag-active {
+    display: none !important;
+  }
+}
+
+.menu-drop-indicator {
+  height: 0px;
+  visibility: hidden;
+  &.active {
+    border: 1px dashed $border-color;
+    height: 50px;
+    visibility: visible;
+    margin-top: 10px;
+  }
+  & + .menu-sub-order-item {
+    margin-top: 10px;
+  }
+}
+
+.menu-item-suggested-list {
+  .ui-chip + .ui-chip {
+    margin-top: 5px;
+  }
+
+  .menu-suggested-chips {
+    max-height: 200px;
+    overflow: auto;
+    .menu-select-chip-wrapper:first-child {
+      .ui-divider {
+        display: none;
+      }
+    }
+  }
+
+  .menu-selected-chips {
+    max-height: 140px;
+    overflow: auto;
+    margin-left: -5px;
+    .ui-chip {
+      margin-left: 5px;
+    }
+  }
+}
+
+.menu-price-multiplier {
+  max-width: 500px;
+
+  .price-options {
+    .ui-select-trigger {
+      min-width: 110px;
+    }
+  }
+
+  .checkboxes {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+}
+
+.menu-toolbar {
+  margin-bottom: 20px;
+
+  .menu-toolbar-actions {
+    > * + * {
+      margin-left: 5px;
+    }
+  }
+}
+
+.menu-inactive-badge {
+  background-color: $theme-dangerLighter;
+  color: $theme-danger;
+}
+
+.item-86-opacity {
+  opacity: 0.6;
+}

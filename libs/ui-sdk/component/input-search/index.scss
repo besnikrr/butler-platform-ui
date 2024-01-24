@@ -1,0 +1,9 @@
+@import '../../style/variables.scss';
+
+.ui-input-search {
+  box-shadow: none;
+  border-color: transparent;
+  ::placeholder{
+    color: $text-primary;
+  }
+}

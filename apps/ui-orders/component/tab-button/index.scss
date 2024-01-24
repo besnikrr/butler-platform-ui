@@ -1,0 +1,36 @@
+@import "../../../../libs/ui-sdk/style/variables.scss";
+
+.ui-tab-button {
+  background-color: $theme-primaryLighter;
+  margin-left: 5px;
+  margin-top: 5px;
+  &.active {
+    background-color: $theme-primary;
+    color: $theme-secondary;
+    &:hover {
+      background-color: $theme-primaryLight;
+    }
+  }
+  &.ui-btn-xlarge {
+    flex: 1;
+  }
+  &:hover {
+    background-color: $theme-primaryLightest;
+    cursor: pointer;
+  }
+  &.outline {
+    background-color: transparent;
+    border: 1px solid $border-color;
+    color: $theme-primary;
+    &:hover {
+      background-color: $theme-primaryLighter;
+    }
+    &.active {
+      background-color: $theme-primary;
+      color: $theme-secondary;
+      &:hover {
+        background-color: $theme-primaryLight;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.iam-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  .iam-content + .iam-content {
+    margin-top: 10px;
+  }
+}
+
+.iam-content {
+  width: 100%;
+  flex: 1;
+  > .ui-row {
+    margin-top: 0;
+  }
+
+  form > .ui-form-control + .ui-form-control {
+    margin-top: 10px;
+  }
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+.ui-row + .ui-row {
+  margin-top: 0;
+}
+
+.form-bottom-action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  > .ui-btn + .ui-btn {
+    margin-left: 10px;
+  }
+}
+
+.iam-sidebar-wrapper {
+  .ui-btn + .ui-btn {
+    margin-top: 10px;
+  }
+}
+
+.iam-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.iam-link-no-underline {
+  text-decoration: none !important;
+  cursor: pointer;
+}

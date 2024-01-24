@@ -1,0 +1,89 @@
+@import '../../libs/ui-sdk/style/variables.scss';
+
+.network-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    .network-content + .network-content {
+      margin-top: 10px;
+    }
+  }
+
+  .network-content {
+    width: 100%;
+    flex: 1;
+    > .ui-row {
+      margin-top: 0;
+    }
+  }
+
+  .toolbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+  }
+
+  .ui-row + .ui-row {
+    margin-top: 0;
+  }
+
+  .form-bottom-action {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    > .ui-btn + .ui-btn {
+      margin-left: 10px;
+    }
+  }
+
+.network-sidebar-wrapper {
+  .ui-btn + .ui-btn {
+    margin-top: 10px;
+  }
+}
+
+.network-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.voucher-toolbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.voucher-dropdown-link{
+  text-decoration: none;
+}
+
+.voucher-type-tooltip {
+  .ui-tooltip {
+      height: 100%;
+  }
+}
+
+.checkbox-corners-fill {
+  .ui-checkbox {
+    border: 2px solid $theme-primary;
+  }
+
+  .ui-checkbox-wrapper{
+    &:hover {
+      .ui-checkbox {
+        border: 2px solid $theme-primary;
+      }
+    }
+  } 
+}
+
+.menu-no-permissions {
+  flex: 1;
+}

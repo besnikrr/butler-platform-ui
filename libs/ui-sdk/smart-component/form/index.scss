@@ -1,0 +1,46 @@
+.ui-form-control {
+  align-items: center;
+  display: flex;
+
+  .ui-form-control-label {
+    width: 150px;
+    margin-left: -150px;
+    padding-right: 15px;
+    word-break: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &.ui-form-control-vertical {
+    display: block;
+    .ui-form-control-label {
+      width: auto;
+      margin-left: 0;
+      padding-right: 0;
+      margin-bottom: 5px;
+    }
+  }
+  > .ui-form-control-input {
+    flex: 1;
+    > * {
+      width: 100%;
+    }
+  }
+}
+
+.ui-form-group {
+  display: flex;
+  margin-left: -150px;
+  .ui-form-control {
+    margin-left: 0;
+    flex: 1;
+    .ui-form-control-label {
+      margin-left: 0;
+    }
+    &:nth-child(n+2) {
+      .ui-form-control-label {
+        width: 80px;
+        margin-left: 20px;;
+      }
+    }
+  }
+}

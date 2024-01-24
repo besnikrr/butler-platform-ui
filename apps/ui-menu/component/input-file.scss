@@ -1,0 +1,11 @@
+@import 'libs/ui-sdk/style/variables.scss';
+
+.ui-input-file {
+  display: flex;
+  color: $text-primary;
+  font-size: $font-size-medium;
+
+  &.ui-input-error {
+    color: $theme-danger;
+  }
+}

@@ -1,0 +1,21 @@
+@import '../../style/variables.scss';
+
+.ui-error-message {
+  color: $theme-danger;
+  font-size: $font-size-large;
+  min-height: 40px;
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  border-radius: $border-radius;
+  padding: 10px;
+  border: 1px solid $theme-dangerLight;
+  background-color: $theme-dangerLighter;
+  white-space: pre-line;
+  line-height: 1.4;
+
+  > .ui-icon {
+    margin-right: 10px;
+    min-width: 16px;
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "root": "apps/ui-dashboard",
+  "sourceRoot": "apps/ui-dashboard",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/ui-dashboard",
+        "index": "apps/ui-dashboard/index.html",
+        "baseHref": "/",
+        "main": "apps/ui-dashboard/main.tsx",
+        "polyfills": "apps/ui-dashboard/polyfills.ts",
+        "tsConfig": "apps/ui-dashboard/tsconfig.app.json",
+        "assets": ["apps/ui-dashboard/assets/favicon.ico"],
+        "styles": ["apps/ui-dashboard/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/ui-dashboard/.env",
+              "with": "apps/ui-dashboard/.env.prod"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "ui-dashboard:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "ui-dashboard:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/ui-dashboard/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/ui-dashboard"],
+      "options": {
+        "jestConfig": "apps/ui-dashboard/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

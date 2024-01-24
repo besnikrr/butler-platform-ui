@@ -1,0 +1,59 @@
+@use "sass:map";
+@use "sass:color";
+@import "../../libs/ui-sdk/style/variables.scss";
+
+.orders-app-container {
+  .orders-app-column {
+    background-color: color.change(map.get($colors, "muted-color"), $alpha: 0.1);
+    height: calc(100vh - $headerHeight - 20px);
+    overflow: auto;
+    position: relative;
+    flex: 0 0 370px;
+    &.reset {
+      background-color: $card-background;
+    }
+    .orders-app-column-header {
+      position: sticky;
+      top: 0;
+
+      .ui-input-search {
+        flex: 1;
+      }
+    }
+  }
+  .orders-side-nav {
+    height: calc(100vh - $headerHeight - 20px);
+    overflow: auto;
+    position: relative;
+    flex: 1;
+    flex: 0 0 220px;
+  }
+  .orders-order-view-container {
+    flex: 4 0 500px;
+  }
+}
+
+.order-full-screen {
+  display: none;
+}
+
+.order-coloured-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-right: 10px;
+  &.default {
+    background-color: $theme-primaryLight;
+  }
+}
+
+.orders-app-card-block {
+  background-color: $card-block;
+  box-shadow: none;
+}
+
+.order-badge-selected {
+  background-color: $theme-primary;
+  color: $white;
+}

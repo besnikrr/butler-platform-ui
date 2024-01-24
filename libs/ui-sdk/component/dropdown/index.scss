@@ -1,0 +1,60 @@
+@import '../../style/variables.scss';
+
+.ui-dropdown-wrapper {
+  z-index: $z-dropdown;
+  .ui-dropdown {
+    filter: drop-shadow($shadow-color 0px 2px 3px);
+    border: 1px solid $greyLight;
+
+    &.ui-arrow-center::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -1px;
+      right: auto;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      background-color: $card-background;
+      transform: translate(-50%, -50%) rotate(45deg);
+      border-top: 1px solid $greyLight;
+      border-left: 1px solid $greyLight;
+      z-index: -1;
+    }
+    &.ui-arrow-left::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -1px;
+      right: auto;
+      left: 21px;
+      width: 16px;
+      height: 16px;
+      background-color: $card-background;
+      transform: translateY(-50%) rotate(45deg);
+      border-top: 1px solid $greyLight;
+      border-left: 1px solid $greyLight;
+      z-index: -1;
+    }
+    &.ui-arrow-right::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -1px;
+      right: 21px;
+      width: 16px;
+      height: 16px;
+      background-color: $card-background;
+      transform: translateY(-50%) rotate(45deg);
+      border-top: 1px solid $greyLight;
+      border-left: 1px solid $greyLight;
+      z-index: -1;
+    }
+    &.ui-arrow-left {
+      &::before {
+        right: auto;
+        left: 21px;
+      }
+    }
+  }
+}
